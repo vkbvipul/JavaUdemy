@@ -1,0 +1,18 @@
+public class SharedDigit {
+    // write your code here
+    public static boolean hasSharedDigit(int para1, int para2)
+    {
+        if((para1<10)||(para2>99)||(para1>99)||(para2<10))
+        {return false;}
+        
+        int digi01 = para1 % 10;para1 = para1/10;
+        int digi11 = para1;
+        int digi02 = para2 % 10;para2 = para2/10;
+        int digi12 = para2;
+        
+        if((digi01 == digi02)||(digi11 == digi02))return true;
+        if((digi01 == digi12)||(digi11 == digi12))return true;
+        
+        return false;
+    }
+}
