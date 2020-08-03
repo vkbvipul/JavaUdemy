@@ -1,0 +1,17 @@
+public static boolean isPalindrome(int number)
+        {
+            int newnumber = 0;
+            int numberorg = number;
+            int digit = 0;
+            ///11211
+            while(numberorg > 0)
+            {
+                if(numberorg <= 9)digit = numberorg;
+                else digit = numberorg%10;
+                newnumber = (newnumber * 10) + digit;
+                numberorg = numberorg / 10;
+            }
+            if(newnumber == number)return true;
+            else return false;
+        }
+    }
