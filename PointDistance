@@ -1,0 +1,30 @@
+public class Point {
+    private int x,y;
+    public Point(){}
+    public Point(int x, int y){this.x = x; this.y= y;}
+    public int getX(){return this.x;};
+    public int getY(){return this.y;};
+    public void setX(int xx){this.x = xx;};
+    public void setY(int yy){this.y = yy;};
+    public double distance() {
+        int xA = this.x;
+        int xB = 0;
+        int yA = this.y;
+        int yB = 0;
+        return Math.sqrt((xB-xA) * (xB-xA) + (yB-yA) * (yB-yA));
+    }
+    public double distance(int d1,int d2){
+        int xA = this.x;
+        int xB = d1;
+        int yA = this.y;
+        int yB = d2;
+        return Math.sqrt((xB-xA) * (xB-xA) + (yB-yA) * (yB-yA));
+    }
+    public double distance(Point p1){
+        int xA = this.x;
+        int xB = p1.x;
+        int yA = this.y;
+        int yB = p1.y;
+        return Math.sqrt((xB-xA) * (xB-xA) + (yB-yA) * (yB-yA));
+    }
+}
